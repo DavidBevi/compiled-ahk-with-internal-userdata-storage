@@ -5,6 +5,9 @@ And I mean directly, using no config-files, no reg-edits, nothing outside the ex
 > [!TIP]
 > **This can be used as a launchboard.** [`Download .ahk`](https://github.com/DavidBevi/compiled-ahk-with-internal-userdata-storage/blob/main/v3_(current)_self_change_(arbitrary_data).ahk) / [`Download .exe`](https://github.com/DavidBevi/compiled-ahk-with-internal-userdata-storage/blob/main/v3_(current)_self_change_(arbitrary_data).exe)
 
+> [!WARNING]
+> Your antivirus my detect/delete my program. I pinky-promise it's not malicious (if you don't believe me just look at the code :smile:)
+
 - It spawns a GUI that displays and lets you edit 4 internal variables. When you click "Save and reload" the changes are saved into an intermediate file (`temp_[original_filename]`).
 - Then the original file launches the temp one and closes itself, so the changes can be saved onto the original file.
 - Then the temp file launches the original one and closes itself, so the original can delete the temp.
@@ -14,7 +17,7 @@ And I mean directly, using no config-files, no reg-edits, nothing outside the ex
 > - It spawns a GUI that displays and lets you increase the byte value of 2 internal variables. The 2 buttons act on one value each, then they trigger the "Save and reload" routine explained in `v3`.
 > 
 > ### `v1_(veryold)_make_child_with_edits.exe`
-> - It spawns a GUI that displays a variable and a button. If you click the button the exe spawns a child exe where the value of the variable is changed. The child should do the same, but the code is broken :-P
+> - It spawns a GUI that displays a variable and a button. If you click the button the exe spawns a child exe where the value of the variable is changed. The child should do the same, but the code is broken :stuck_out_tongue_closed_eyes:
 
 ### Misc
 For now I only found a way to do it by reading/writing the value as raw/binary, which is cumbersome. I hope to find a better solution.
