@@ -2,6 +2,9 @@
 And I mean directly, using no config-files, no reg-edits, nothing outside the exe.
 
 ## v3 (current): Internally store arbitrary strings
+
+![Screenshot](https://github.com/DavidBevi/compiled-ahk-with-internal-userdata-storage/blob/main/Demo.png?raw=true)
+
 > [!TIP]
 > **This can be used as a launchboard.** [`Download .ahk`](https://github.com/DavidBevi/compiled-ahk-with-internal-userdata-storage/blob/main/v3_(current)_self_change_(arbitrary_data).ahk) / [`Download .exe`](https://github.com/DavidBevi/compiled-ahk-with-internal-userdata-storage/blob/main/v3_(current)_self_change_(arbitrary_data).exe)
 
