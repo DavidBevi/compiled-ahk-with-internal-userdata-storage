@@ -1,16 +1,20 @@
 # Goal: [saving user data inside a compiled AHK script](https://www.reddit.com/r/AutoHotkey/comments/1d5sahq/save_user_data_inside_compiled_exe_is_it_possible/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
 And I mean directly, using no config-files, no reg-edits, nothing outside the exe.
 
-## v3 (current) self change with arbitrary data
+## v3 (current): Internally store arbitrary strings
 > [!TIP]
 > **This can be used as a launchboard.** [`Download .ahk`](https://github.com/DavidBevi/compiled-ahk-with-internal-userdata-storage/blob/main/v3_(current)_self_change_(arbitrary_data).ahk) / [`Download .exe`](https://github.com/DavidBevi/compiled-ahk-with-internal-userdata-storage/blob/main/v3_(current)_self_change_(arbitrary_data).exe)
 
-> [!WARNING]
-> Your antivirus my detect/delete my program. I pinky-promise it's not malicious (if you don't believe me just look at the code :smile:)
+>  [!WARNING]
+> - Your antivirus my detect/delete my program. I pinky-promise it's not malicious (if you don't believe me just look at the code :smile:)
+> - Please be also aware that by its very nature this code is able to corrupt itself, it will probably do it as soon as you steer from the suggested use case.
 
-- It spawns a GUI that displays and lets you edit 4 internal variables. When you click "Save and reload" the changes are saved into an intermediate file (`temp_[original_filename]`).
-- Then the original file launches the temp one and closes itself, so the changes can be saved onto the original file.
-- Then the temp file launches the original one and closes itself, so the original can delete the temp.
+> :gear: **How it works**
+> 
+> This program consists in a window that displays and lets you edit 4 internal variables. When you click "Save and reload":
+> - a temporary intermediate file (`temp_[original_filename]`) is made to store the changes;
+> - the original file launches the temp one and closes itself, so the changes can be saved onto the original file;
+> - the temp file launches the original one and closes itself, so the original can delete the temp.
 
 ## Older demos
 > ### `v2_(old)_self_change_(fixed_data).ahk` / `.exe`
